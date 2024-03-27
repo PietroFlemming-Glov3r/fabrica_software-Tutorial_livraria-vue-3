@@ -3,7 +3,7 @@ import axios from "axios";
 export default class CategoriasApi {
   async buscarTodasAsCategorias() {
     const { data } = await axios.get("/categorias/");
-    return data;
+    return data.results;
   }
   async adicionarCategoria(categoria) {
     const { data } = await axios.post("/categorias/", categoria);

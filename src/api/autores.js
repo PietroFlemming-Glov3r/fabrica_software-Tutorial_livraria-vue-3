@@ -2,7 +2,7 @@ import axios from "axios";
 export default class AutoresApi {
   async buscarTodosOsAutores() {
     const { data } = await axios.get("/autores/");
-    return data;
+    return data.results;
   }
   async adicionarAutor(autor) {
     const { data } = await axios.post("/autores/", autor);
